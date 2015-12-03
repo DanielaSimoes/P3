@@ -1,0 +1,7 @@
+package Aula12;
+
+public class getters {
+
+	private Class<?> c;
+	
+}

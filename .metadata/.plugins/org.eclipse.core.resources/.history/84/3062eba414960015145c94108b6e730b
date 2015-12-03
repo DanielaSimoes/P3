@@ -1,0 +1,40 @@
+package Aula12;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class ex1 {
+	
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);	
+
+		try {
+			String option;
+			Class<?> p = Class.forName(namespaces[i]+nameclass);
+			LinkedList<Object> ll = new LinkedList<>();
+			Scanner sc = new Scanner(System.in);
+			
+			do{
+				getters insp = new getters(p);
+				System.out.println(insp.getChar());
+				
+				System.out.println("-------------------------------");
+				
+				Object inst = insp.instance();
+				
+				System.out.print("Quer criar mais instâncias? ");
+				option = sc.next();
+				
+				ll.add(inst);
+			}while(option.equalsIgnoreCase("y"));
+			
+			System.out.println("-------------------------------");
+			
+			for(Object b : ll.toArray()){
+				System.out.println(b);
+			}
+			sc.close();
+		} catch (ClassNotFoundException e) {
+			System.out.println("Class não encontrada! ");
+		}
+	}
+}

@@ -1,0 +1,18 @@
+package Aula12;
+
+import java.util.Scanner;
+
+public class ex1 {
+	
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		
+		String disponiveis[] = {"Aula12.Pessoa", "Aula12.Data"};
+		
+		System.out.println("Nome da class: ");
+		String className = sc.nextLine();
+		
+		
+		
+	}
+}

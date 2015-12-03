@@ -1,0 +1,32 @@
+package Aula12;
+
+import java.lang.reflect.Field;
+
+public class getters {
+
+	private static Class<?> c;
+	
+	public getters(Class<?> c){
+		//this.c = c;
+	}
+	
+	public static void main(String[] args) throws ClassNotFoundException{
+		c = Class.forName("Aula12.Pessoa");
+		getAttributes();
+		
+	}
+	
+	//public String getCharecteristics(){
+		//return "Nome: " + c.getSimpleName() + "\n Interfaces: " + getClassInterfaces() + "\n"
+	//}
+	
+	public static String getAttributes(){
+		for(Field f : c.getDeclaredFields()){
+			System.out.println(f.toString());
+		}
+		return "";
+	}
+	
+
+	
+}

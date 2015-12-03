@@ -1,0 +1,53 @@
+package Aula12;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
+public class getters {
+
+	private static Class<?> c;
+	
+	public getters(Class<?> c){
+		this.c = c;
+	}
+	
+	public String getAttributes(){
+		String attr = "";
+		for(Field f : c.getDeclaredFields()){
+			attr += f.toString() + "\t";
+		}
+		return attr;
+	}
+	
+	public String getMethods(){
+		String methods = "";
+		
+		for(Method m: c.getDeclaredMethods()){
+			methods += m.toString() + "\t";
+		}
+		return methods;
+	}
+	
+	public String getInterfaces(){
+		String interfaces = "";
+		
+		if (c.getInterfaces().length!=0){
+			interfaces += " implements";
+		}
+		
+		for(Class<?> cl : c.getInterfaces()){
+			interfaces += cl.getSimpleName();
+		}
+		return interfaces;
+	}
+	
+	public static String superClasses(){
+		Class<?> cl = c.getSuperclass();
+		
+		if(cl.getSimpleName() == null || cl.getSimpleName().length()==0){
+			return "";
+		}
+		return " extends " + cl.getSimpleName();
+	}
+	
+}

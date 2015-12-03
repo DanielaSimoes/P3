@@ -1,0 +1,11 @@
+package Aula12;
+
+public class getters {
+
+	private Class<?> c;
+	
+	public getters(Class<?> c){
+		this.c = c;
+	}
+	
+}
