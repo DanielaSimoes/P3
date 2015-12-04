@@ -29,7 +29,7 @@ public class vCard extends Listas implements ReadWriteInterface{
 		try{
 			reader = new Scanner(fileToRead);
 		}catch(FileNotFoundException e){
-			System.err.println("Ficheiro n‹o encontrado!");
+			System.err.println("Ficheiro nao encontrado!");
 		}
 		
 		try{

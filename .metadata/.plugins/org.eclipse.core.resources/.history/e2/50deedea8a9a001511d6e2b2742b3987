@@ -1,0 +1,8 @@
+package Aula12;
+
+public class PrintOla implements IPlugin{
+
+	@Override public void fazQualQuerCoisa(){
+		System.out.println("Ola!");
+	}
+}

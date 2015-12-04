@@ -1,0 +1,8 @@
+package Aula12;
+
+public abstract class PluginManagerEx3 {
+	public static ReadWrite load(String className) throws Exception {
+		Class<?> c = Class.forName(className);
+		return (ReadWrite) c.newInstance();
+	}
+}

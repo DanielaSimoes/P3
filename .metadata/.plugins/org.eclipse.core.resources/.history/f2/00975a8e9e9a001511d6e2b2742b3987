@@ -1,0 +1,12 @@
+package Aula12;
+import java.util.*;
+import java.lang.reflect.*;
+public abstract class PluginManagerEx3 {
+	
+	public static ReadWrite load(String className, Map<String, Pessoa> map) throws Exception {
+		Class<?> c = Class.forName(className);
+		Class<?>[] paramTypes = {map.getClass()};
+		Constructor<?> cons = c.getConstructor(paramTypes);
+		return (ReadWrite) cons.newInstance(map);
+	}
+}

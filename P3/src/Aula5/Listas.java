@@ -1,6 +1,5 @@
 package Aula5;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Set;
 
@@ -26,5 +25,4 @@ public class Listas {
 				System.out.println("Name: " + people[k].getName() + " Data de nascimento: " + people[k].getDate() + " CC: " + people[k].getCC());
 			}
 		}
-
 }

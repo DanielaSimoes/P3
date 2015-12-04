@@ -30,7 +30,7 @@ public class ex3 {
 				System.out.println("Sair -> 0");
 				response = sc.nextInt();
 			}catch(InputMismatchException e){
-				System.err.println("Não pode inserir letras onde devem constar números!");
+				System.err.println("Nao pode inserir letras onde devem constar numeros!");
 			}
 			
 			switch(response){
@@ -90,7 +90,7 @@ public class ex3 {
 			System.out.println("Data de nascimento: ");
 			System.out.println("Dia: ");
 			int day = sc.nextInt();
-			System.out.println("Mês: ");
+			System.out.println("Mes: ");
 			int month = sc.nextInt(); 
 			System.out.println("Ano: ");
 			int year = sc.nextInt();
@@ -104,7 +104,7 @@ public class ex3 {
 			}
 			
 		}catch(InputMismatchException e){
-			System.err.println("Não pode inserir letras onde devem constar números!");
+			System.err.println("Nao pode inserir letras onde devem constar numeros!");
 		}
 		
 	}
